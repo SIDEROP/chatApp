@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* light mode  */
+/* body bg-color #F3F4F6  and color black #212529 */
+/* sideBar and userLis bg color #464852 and chat text user text color white like this #CECED1 */
+
+/* done  */
+/* dark mode  */
+/* body bg-color  #272935  and color white #A1A6AF */
+/* sideBar and userLis bg color #464852 and chat text user text color white like this #CECED1 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+/* light mode  */
+body {
+  background-color: #f3f4f6 !important;
+  color: #212529 !important;
+}
+
+body .SideBar {
+  background-color: white !important;
+  color: #212529 !important;
+}
+
+body .userChat,
+.chatBox {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body .sendMasseg .send {
+  color: black !important;
+  background-color: #00f59f73 !important;
+}
+
+body input {
+  background-color: white !important;
+  margin: 0 10px;
+  color: #464852 !important;
+}
+body .mode {
+  background-color: #cfd0d3 !important;
+  color: #464852 !important;
+}
+
+/* darck mode  */
+body.active {
+  background-color: #272935 !important;
+  color: #cfd0d3 !important;
+}
+
+body.active .SideBar {
+  background-color: #464852 !important;
+  color: #cfd0d3 !important;
+}
+
+body.active .userChat,
+.chatBox {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.active .userProfileList .user {
+  background-color: #464852 !important;
+  color: #cfd0d3 !important;
+}
+
+body.active .Chat {
+  padding: 5px 5px !important;
+}
+
+body.active .sendMasseg .send {
+  color: #6a6969 !important;
+  background-color: white !important;
+}
+
+body.active input {
+  background-color: #464852 !important;
+  margin: 0 10px;
+  color: #cdcdcd !important;
+  padding: 4px 5px !important;
+}
+
+body.active .mode {
+  background-color: rgba(0, 0, 0, 0.404) !important;
+  color: #cdcdcd !important;
+}
+
+@media only screen and (max-width: 428px) {
+  body.active .Chat {
+    padding: 0 0 !important;
+  }
+  body.active .userChat {
+    border-radius: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body > div {
+    flex-direction: column;
+  }
+}
+
+.authenticatDataProfile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.248);
+}
+
+/* search  */
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #ffffff;
+  caret-color: white;
+  color: white;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-right: 1px;
+  transition: all 0.2s ease;
+}
+
+.input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.input:focus {
+  border: 2px solid #a970ff;
+  background-color: #0e0e10;
+}
+
+.search__btn {
+  border: none;
+  cursor: pointer;
+  background-color: rgba(42, 42, 45, 1);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__btn:hover {
+  background-color: rgba(54, 54, 56, 1);
+}
+
+.notiDivBox {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+body.active .notiDivBox {
+  background: transparent !important;
+  box-shadow: 0 0 0 #bebebe00, -20px -20px 60px #ffffff00;
+}
+
+
+
+
+
+p.typing{
+  position: absolute;
+  
+}

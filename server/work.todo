@@ -1,0 +1,49 @@
+node-moduls
+public
+uploads
+src > 
+      api-doc >
+              swagger-output.json
+      conttrollers >
+                    auth.contr.js
+                    chat.contr.js
+                    message.contr.js
+                    user.contr.js
+      db >
+          connect.js
+      middlewares >
+                    cloudinary.js
+                    auth.js
+      models>
+             User.js
+             Message.js
+             User.js
+      routes>
+             auth.routes.js
+             chat.routes.js
+             message.routes.js
+             user.routes.js
+      utils >
+              apiError.js
+              apiResponse.js
+              asyncHandler.js
+              generateToken.js
+              crypto.js
+      services>
+              notificationService.js
+      sockets >
+              chat.js
+              conttrollers >
+                            user.contr.io.js
+      app.js
+      swagger.js
+      indexe.js
+      const.js
+.env
+.eslintrc.json
+.prettierignore
+.prettierrc
+package-lock.json
+package.json
+
+// Jest ya Mocha

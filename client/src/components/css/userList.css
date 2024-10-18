@@ -1,0 +1,13 @@
+.user{
+    overflow: hidden;
+}
+.user p.line {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 5px;
+    background-color: none;
+}
+.user.active p.line {
+    background-color: black;
+}
