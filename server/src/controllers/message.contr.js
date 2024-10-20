@@ -15,8 +15,6 @@ export const sendMessage = asyncHandler(async (req, res) => {
   const { content } = req.body;
   const { userId } = req.user;
   let encr = encrypt(content);
-  console.log(encr);
-  console.log(decrypt(encr));
 
   if (!receiverId || !content) {
     throw new ApiError(400, "Receiver ID and content are required");

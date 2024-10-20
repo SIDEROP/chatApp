@@ -1,0 +1,1 @@
+export const VITE_API_URL = 'https://chatapp-jnib.onrender.com'

@@ -1,14 +1,14 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { clearChat } from "./chatSlice"; // Import clearChat action
-
+let { VITE_API_URL } = import.meta.env;
 // Async Thunk for sending a message
 export const sendMessage = createAsyncThunk(
   "messages/sendMessage",
   async ({ receiverId, content }, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/v1/message/sendMessage/${receiverId}`,
+        `${VITE_API_URL}/api/v1/message/sendMessage/${receiverId}`,
         { content },
         { withCredentials: true }
       );
@@ -25,7 +25,7 @@ export const deleteMessageApi = createAsyncThunk(
   async (receiverId, { dispatch, rejectWithValue }) => {
     try {
       const response = await axios.delete(
-        `http://localhost:4000/api/v1/message/delete/${receiverId}`,
+        `${VITE_API_URL}/api/v1/message/delete/${receiverId}`,
         { withCredentials: true }
       );
 

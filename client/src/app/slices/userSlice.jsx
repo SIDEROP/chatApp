@@ -1,12 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+let { VITE_API_URL } = import.meta.env;
 
 export const getAllUsers = createAsyncThunk(
   "users/getAllUsers",
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/user/getAllUsers",
+        `${VITE_API_URL}/api/v1/user/getAllUsers`,
         { withCredentials: true }
       );
       return response.data;

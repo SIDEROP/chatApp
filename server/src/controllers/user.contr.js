@@ -6,7 +6,6 @@ import ApiError from "../utils/apiError.js";
 // Get all users except the logged-in user
 export const getAllUsers = asyncHandler(async (req, res) => {
   const currentUserId = req.user.userId;
-  console.log(currentUserId);
   try {
     const users = await User.find({ _id: { $ne: currentUserId } }).select(
       "-password",

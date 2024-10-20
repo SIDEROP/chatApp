@@ -1,122 +1,130 @@
-
-.Login,
-.SignUp{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+/* login.css */
+.Login, .SignUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f0f2f5;
+  width: 100%;
 }
 
 .form {
-    width: clamp(200px,90%,600px);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 0.4em;
-    background-color: #171717;
-    border-radius: 25px;
-    transition: .4s ease-in-out;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+#heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  transform: translateY(-50%);
+  fill: #555;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.button1,
+.button2,
+.button3 {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button1 {
+  background-color: #007bff;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.button1:hover {
+  background-color: #0056b3;
+}
+
+.button2 {
+  background-color: #6c757d;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.button2:hover {
+  background-color: #5a6268;
+}
+
+.button3 {
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  text-align: left;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.button3:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .Login, .SignUp {
+    padding: 20px;
   }
-  
-  .form:hover {
-    transform: scale(1.05);
-    border: 1px solid black;
-  }
-  
-  #heading {
-    text-align: center;
-    margin: 2em;
-    color: rgb(255, 255, 255);
-    font-size: 1.2em;
-  }
-  
-  .field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    border-radius: 25px;
-    padding: 0.6em;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: #171717;
-    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-  }
-  
-  .input-icon {
-    height: 1.3em;
-    width: 1.3em;
-    fill: white;
-  }
-  
-  .input-field {
-    background: none;
-    border: none;
-    outline: none;
+
+  .form {
     width: 100%;
-    color: #d3d3d3;
+    padding: 20px 15px;
+    border-radius: 8px;
   }
-  
-  .form .btn {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 2.5em;
-    gap: 10px;
-    align-items: center;
+
+  #heading {
+    font-size: 22px;
+    margin-bottom: 15px;
   }
-  
-  .button1 {
-    padding: 0.5em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    border-radius: 5px;
-    margin-right: 0.5em;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
+
+  .input-field {
+    padding: 10px 35px;
+    font-size: 14px;
   }
-  
-  .button1:hover {
-    background-color: black;
-    color: white;
+
+  .button1, .button2, .button3 {
+    padding: 10px;
+    font-size: 14px;
   }
-  
-  .button2 {
-    padding: 0.5em;
-    padding-left: 2.3em;
-    padding-right: 2.3em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
+
+  .input-icon {
+    left: 17px;
+    width: 14px;
+    height: 14px;
   }
-  
-  .button2:hover {
-    background-color: black;
-    color: white;
-  }
-  
-  .button3 {
-    margin-bottom: 3em;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
-  }
-  
-  .button3:hover {
-    background-color: red;
-    color: white;
-  }
+}

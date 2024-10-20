@@ -3,13 +3,14 @@ import axios from "axios";
 import { removeNotification } from "../../utils/isUserIdInNotifications ";
 import { userChatFilterRecever } from "../../utils/getLastChatContent";
 
+let { VITE_API_URL } = import.meta.env;
 // Fetch user's chat participants
 export const getUserParticipants = createAsyncThunk(
   "chat/getUserParticipants",
   async (_, thunkAPI) => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/v1/chat/getUserParticipants`,
+        `${VITE_API_URL}/api/v1/chat/getUserParticipants`,
         { withCredentials: true }
       );
       return response.data?.data;
@@ -25,7 +26,7 @@ export const getUserChat = createAsyncThunk(
   async (receiverId, thunkAPI) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:4000/api/v1/chat/getUserChat/${receiverId}`,
+        `${VITE_API_URL}/api/v1/chat/getUserChat/${receiverId}`,
         { withCredentials: true }
       );
       return data?.data?.messages;
@@ -41,7 +42,7 @@ export const getNotification = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/notification/get",
+        `${VITE_API_URL}/api/v1/notification/get`,
         { withCredentials: true }
       );
       return data.data;
@@ -57,7 +58,7 @@ export const deleteParticipantAndMessagesApi = createAsyncThunk(
   async (receiverId, { rejectWithValue }) => {
     try {
       const response = await axios.delete(
-        `http://localhost:4000/api/v1/chat/delete/${receiverId}`,
+        `${VITE_API_URL}/api/v1/chat/delete/${receiverId}`,
         { withCredentials: true }
       );
       return response.data;
@@ -227,7 +228,7 @@ export default chatSlice.reducer;
 //   async (_, thunkAPI) => {
 //     try {
 //       const response = await axios.get(
-//         `http://localhost:4000/api/v1/chat/getUserParticipants`,
+//         `${VITE_API_URL}/api/v1/chat/getUserParticipants`,
 //         { withCredentials: true }
 //       );
 //       return response.data?.data;
@@ -243,7 +244,7 @@ export default chatSlice.reducer;
 //   async (receiverId, thunkAPI) => {
 //     try {
 //       const { data } = await axios.get(
-//         `http://localhost:4000/api/v1/chat/getUserChat/${receiverId}`,
+//         `${VITE_API_URL}/api/v1/chat/getUserChat/${receiverId}`,
 //         { withCredentials: true }
 //       );
 //       return data?.data?.messages;
@@ -259,7 +260,7 @@ export default chatSlice.reducer;
 //   async (_, { rejectWithValue }) => {
 //     try {
 //       const { data } = await axios.get(
-//         "http://localhost:4000/api/v1/notification/get",
+//         "${VITE_API_URL}/api/v1/notification/get",
 //         { withCredentials: true }
 //       );
 //       return data.data;

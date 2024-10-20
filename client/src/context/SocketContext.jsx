@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
   );
   useEffect(() => {
     if (authenticat) {
-      const socket = io("http://localhost:4000", {
+      const socket = io(import.meta.env.VITE_SERVER_API_URL, {
         query: {
           userId: authenticatData?._id,
         },
@@ -24,7 +24,6 @@ export const SocketContextProvider = ({ children }) => {
       setSocket(socket);
 
       socket?.on("getOnlineUsers", (users) => {
-        console.log(users)
         setOnlineUsers(users);
       });
 
